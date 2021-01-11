@@ -1,0 +1,12 @@
+<%- include("partials/header") -%>
+
+<h1>Hi! I'm Aggi Sahithi</h1>
+
+<% posts.forEach(function(post){ %>
+ <h1> <%= post.title %> </h1>
+ <p> <%= post.body.substring(0,100) + "..." %> <a href="/posts/<%= post.title %>">Read more</a> </p>
+<% }); %>
+
+<img src="../images/welcome_cats.png" alt="" width="40%" height="40%">
+
+<%- include("partials/footer") -%>
